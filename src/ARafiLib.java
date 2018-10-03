@@ -8,20 +8,30 @@ public class ARafiLib {
         return true;
     }
 
-    public static String isPalindrome(String str){
+    public static boolean isPalindrome(String str){
         int i = 0;
-        String result = "";
-        while (i <= str.length()){
-            String str1 = str.substring(str.length() - 1);
-            String str2 = str.substring(0, str1.length());
+        int x = str.length();
+        String result = str;
+        String result2 = "";
+        while (i < x) {
+            String str1 = result.substring(x - 1); // getting the last character
+            String str2 = result.substring(0, x - 1);
             result = str1 + str2;
+            result2 = result2 + str1;
             i++;
         }
-        if (result.equals(str)){
+        if (result2.equals(str)){
             return true;
         }
-        else{
+        else {
             return false;
         }
+    }
+
+    public static String cutOut(String mainStr, String subStr){
+        int i = mainStr.indexOf(subStr);
+        String one = mainStr.substring(0,i);
+        String two = mainStr.substring(i + subStr.length());
+        return one + two;
     }
 }
