@@ -7,4 +7,21 @@ public class ARafiLib {
         }
         return true;
     }
+
+    public static String isPalindrome(String str){
+        int i = 0;
+        String result = "";
+        while (i <= str.length()){
+            String str1 = str.substring(str.length() - 1);
+            String str2 = str.substring(0, str1.length());
+            result = str1 + str2;
+            i++;
+        }
+        if (result.equals(str)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }
