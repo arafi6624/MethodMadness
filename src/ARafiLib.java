@@ -34,4 +34,14 @@ public class ARafiLib {
         String two = mainStr.substring(i + subStr.length());
         return one + two;
     }
+
+    public static int sumUpTo(int n){
+        int result = 0;
+        for(int i = 0; i <= n; i++){
+            result = result + i;
+        }
+        return result;
+    }
+
+    public static int
 }
