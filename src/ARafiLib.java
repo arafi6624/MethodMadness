@@ -1,12 +1,4 @@
 public class ARafiLib {
-    public static boolean isPrime(int n){
-        for (int i = 2; i < n; i++){
-            if(n%i == 0){
-                return false;
-            }
-        }
-        return true;
-    }
 
     public static boolean isPalindrome(String str){
         int i = 0;
@@ -43,5 +35,13 @@ public class ARafiLib {
         return result;
     }
 
-    public static int
+    public static String primePrinter( int num){
+        String result = "";
+        for (int i = 2; i < num; i++){
+            if (num%i == 0){
+                result = result + i;
+            }
+        }
+        return result;
+    }
 }
