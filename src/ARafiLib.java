@@ -6,7 +6,7 @@ public class ARafiLib {
         String result = str;
         String result2 = "";
         while (i < x) {
-            String str1 = result.substring(x - 1); // getting the last character
+            String str1 = result.substring(x - 1); // Getting the last character
             String str2 = result.substring(0, x - 1);
             result = str1 + str2;
             result2 = result2 + str1;
@@ -35,13 +35,36 @@ public class ARafiLib {
         return result;
     }
 
-    public static String primePrinter( int num){
-        String result = "";
-        for (int i = 2; i < num; i++){
-            if (num%i == 0){
-                result = result + i;
+    public static String primePrinter(int num) {
+        String result = " ";
+        int i = 1;
+        while (i < num){
+            for (int a = 2; a < i; a++){
+                if(i % a == 0){
+
+                }
             }
+            result = i + result;
+            i++;
         }
         return result;
+    }
+
+    public static String dateStr(String str){
+        String month = str.substring(0,2);
+        String date = str.substring(3,5);
+        String year = str.substring(6);
+        return date + "-" + month + "-" + year;
+    }
+
+    public static int leastCommonMultiple(int num1, int num2, int num3){
+        int i = 2;
+        while (i < num1){
+            if (num1%i == 0 && num2%i == 0 && num3%i == 0){
+                return i;
+            }
+            i++;
+        }
+        return i;
     }
 }
